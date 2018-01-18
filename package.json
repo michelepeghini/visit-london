@@ -1,0 +1,25 @@
+{
+  "name": "gulp-sass-workflow",
+  "version": "1.0.0",
+  "description": "Workflow with gulp, sass, browserify and bowsersync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelepeghini/gulp-sass-workflow.git"
+  },
+  "keywords": [
+    "sass",
+    "npm",
+    "git",
+    "gulp"
+  ],
+  "author": "Michele Peghini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelepeghini/gulp-sass-workflow/issues"
+  },
+  "homepage": "https://github.com/michelepeghini/gulp-sass-workflow#readme"
+}
