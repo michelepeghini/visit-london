@@ -1,5 +1,5 @@
 # Project specific ignores
-node-modules/
+node_modules/
 
 
 # Boilerplate always-ignore extensions
