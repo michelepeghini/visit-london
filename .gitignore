@@ -1,6 +1,6 @@
 # Project specific ignores
-node_modules/
-
+node_modules
+app/
 
 # Boilerplate always-ignore extensions
 *.diff
