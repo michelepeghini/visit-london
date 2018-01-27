@@ -1,0 +1,63 @@
+/* VARIABLES */
+
+$white: #FFFFFF;
+$blue: #007683;
+$dark-blue: darken($blue, 3);
+$yellow: #FFBA00;
+$green: #58C237;
+$red: #FE2D28;
+$black: #000000;
+
+$bg-color: $blue;
+$text-color: $black;
+
+$p-font-size: 1.2rem;
+$p-font-family: 'Open Sans', sans-serif;
+
+$h-color: $yellow;
+$h-font-family: 'Bitter', serif;
+
+$nav-bg-color: $dark-blue;
+$menu-anchor-font-size: 1.4rem;
+
+$card-bg-color: $white;
+$card-text-font-size: 1rem;
+
+$h-font-size: (
+  h1:40px,
+  h2:36px,
+  h3:32px,
+  h4:28px,
+  h5:24px,
+  h6:20px
+);
+
+$h-font-weight: 700;
+
+$bg-footer: $dark-blue;
+
+
+//Visit
+
+$visit-border-color: $white;
+$visit-heading-color: lighten($yellow, 10);
+$visit-text-color: $white;
+
+
+//grid and responsiveness
+
+$breakpoints: (
+  phone: 480px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+$columns: 12;
+
+$grid-max-width: 1200px;
+
+
+// buttons
+
+
+$btn-font-size: 16px;

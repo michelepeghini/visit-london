@@ -62,7 +62,8 @@ gulp.task('clean-images', function() {
 
 
 /* CSS */
-gulp.task('serve', ['compresscss'], function() {
+
+gulp.task('serve', ['sass'], function() {
   browserSync.init([APPPATH.css + '/*.css', APPPATH.root + '/*.html', APPPATH.js + '/*.js'], {
     server: {
       baseDir: APPPATH.root
@@ -70,11 +71,15 @@ gulp.task('serve', ['compresscss'], function() {
   });
 });
 
-gulp.task('moveFonts', function(){
-  return gulp.src('./node_modules/bootstrap/dist/fonts/*.{eot,svg,ttf,woff,woff2}')
-    .pipe(gulp.dest(APPPATH.fonts));
-});
+gulp.task('sass', function(){
 
+
+  return gulp.src(SOURCEPATHS.sassSource)
+    .pipe(autoprefixer())
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest(APPPATH.css));
+});
 
 /* HTML */
 
@@ -99,18 +104,13 @@ gulp.task('minifyHtml', function() {
 });
 
 gulp.task('compresscss', function(){
-  var bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css');
-  var sassFiles;
-
-  sassFiles = gulp.src(SOURCEPATHS.sassSource)
+  return gulp.src(SOURCEPATHS.sassSource)
     .pipe(autoprefixer())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError));
-
-    return merge(bootstrapCSS, sassFiles)
-      .pipe(concat('app.css'))
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(APPPATH.css));
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(concat('app.css'))
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(APPPATH.css));
 });
 
 gulp.task('minify',  function() {
@@ -124,9 +124,8 @@ gulp.task('minify',  function() {
 /* END PRODUCTION TASKS */
 
 /* WATCH */
-gulp.task('watch', ['moveFonts', 'images', 'serve', 'html', 'scripts'], function() {
-  gulp.watch([SOURCEPATHS.sassSource], ['compresscss']);
-  //gulp.watch([SOURCEPATHS.htmlSource], ['copy']);
+gulp.task('watch', ['images', 'serve', 'html', 'scripts'], function() {
+  gulp.watch([SOURCEPATHS.sassSource], ['sass']);
   gulp.watch([SOURCEPATHS.htmlSource, SOURCEPATHS.htmlPartialSource], 'html');
   gulp.watch([SOURCEPATHS.jsSource], ['scripts']);
   gulp.watch([SOURCEPATHS.imgSource], ['images']);
