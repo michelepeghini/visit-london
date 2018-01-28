@@ -1,46 +1,45 @@
 {
-  "name": "gulp-sass-workflow",
+  "name": "workflow",
   "version": "1.0.0",
-  "description": "Workflow with gulp, sass, browserify and bowsersync",
+  "description": "My Web Workflow with NPM, SASS, Gulp and More",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michelepeghini/gulp-sass-workflow.git"
+    "url": "git+https://github.com/juanpablogdl/workflow.git"
   },
   "keywords": [
-    "sass",
-    "npm",
-    "git",
-    "gulp"
+    "SASS",
+    "NPM",
+    "Git",
+    "Gulp"
   ],
-  "author": "Michele Peghini",
+  "author": "Juan Pablo De la torre",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/michelepeghini/gulp-sass-workflow/issues"
+    "url": "https://github.com/juanpablogdl/workflow/issues"
   },
-  "homepage": "https://github.com/michelepeghini/gulp-sass-workflow#readme",
+  "homepage": "https://github.com/juanpablogdl/workflow#readme",
   "devDependencies": {
     "bootstrap": "^3.3.7",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-browserify": "^0.5.1",
-    "gulp-clean": "^0.4.0",
+    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-inject-partials": "^1.0.3",
-    "gulp-minify": "^2.1.0",
-    "gulp-newer": "^1.4.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-inject-partials": "^1.0.2",
+    "gulp-minify": "0.0.14",
+    "gulp-newer": "^1.3.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "jquery": "^3.3.1",
+    "gulp-sass": "^3.0.0",
+    "jquery": "^3.1.1",
     "merge-stream": "^1.0.1",
     "mustache": "^2.3.0"
-  },
-  "dependencies": {}
+  }
 }
